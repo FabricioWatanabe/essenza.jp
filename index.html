@@ -3,160 +3,250 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Essência Japão</title>
+<title>Essenza JP</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f4f4f4;
+
+body{
+    margin:0;
+    background:#0f0f0f;
+    color:#eaeaea;
+    font-family: 'Montserrat', sans-serif;
 }
 
-header {
-    background: black;
-    color: white;
-    padding: 20px;
-    text-align: center;
+header{
+    text-align:center;
+    padding:60px 20px 40px;
 }
 
-nav {
-    background: #111;
-    padding: 10px;
-    text-align: center;
+header h1{
+    font-family:'Playfair Display', serif;
+    font-size:42px;
+    letter-spacing:3px;
+    color:#d4af37;
+    margin:0;
 }
 
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+header p{
+    margin-top:10px;
+    font-size:14px;
+    letter-spacing:2px;
+    color:#aaa;
 }
 
-.container {
-    padding: 40px 20px;
+nav{
+    text-align:center;
+    padding-bottom:30px;
 }
 
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
+nav a{
+    color:#d4af37;
+    margin:0 20px;
+    text-decoration:none;
+    font-size:14px;
+    letter-spacing:2px;
 }
 
-.card {
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.products{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
+    padding:40px 20px;
 }
 
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    border-radius: 8px;
+.card{
+    background:#1a1a1a;
+    padding:20px;
+    border-radius:8px;
+    text-align:center;
+    transition:0.3s;
+    border:1px solid #222;
 }
 
-button {
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    cursor: pointer;
+.card:hover{
+    transform:translateY(-5px);
+    border:1px solid #d4af37;
 }
 
-button:hover {
-    background: #333;
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:6px;
 }
 
-.about {
-    background: white;
-    padding: 40px 20px;
-    margin-top: 50px;
+.card h3{
+    font-family:'Playfair Display', serif;
+    margin-top:20px;
+    font-size:22px;
+    color:#fff;
 }
 
-footer {
-    background: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
+.price-old{
+    text-decoration:line-through;
+    color:#777;
+    margin-top:10px;
 }
+
+.price-new{
+    color:#d4af37;
+    font-size:22px;
+    font-weight:bold;
+}
+
+button{
+    margin-top:15px;
+    padding:12px;
+    width:100%;
+    border:none;
+    background:#d4af37;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+    letter-spacing:1px;
+}
+
+button:hover{
+    background:#b9972e;
+}
+
+.about{
+    max-width:900px;
+    margin:80px auto;
+    text-align:center;
+    padding:0 20px;
+}
+
+.about h2{
+    font-family:'Playfair Display', serif;
+    color:#d4af37;
+    margin-bottom:20px;
+}
+
+footer{
+    background:#111;
+    text-align:center;
+    padding:40px 20px;
+    font-size:14px;
+    color:#aaa;
+}
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.8);
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:8px;
+    width:300px;
+    text-align:center;
+    border:1px solid #d4af37;
+}
+
+.modal-content h3{
+    color:#d4af37;
+}
+
+.modal-content button{
+    margin-top:10px;
+}
+
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>Essência Japão</h1>
-<p>Perfumes Originais no Japão 🇯🇵</p>
+<h1>ESSENZA JP</h1>
+<p>PERFUMES AUTÊNTICOS NO JAPÃO 🇯🇵</p>
 </header>
 
 <nav>
-<a href="#">Início</a>
-<a href="#produtos">Produtos</a>
-<a href="#sobre">Sobre Nós</a>
+<a href="#">INÍCIO</a>
+<a href="#produtos">PRODUTOS</a>
+<a href="#sobre">SOBRE</a>
 </nav>
 
-<div class="container" id="produtos">
-<h2>Nossos Perfumes</h2>
-
-<div class="products">
+<section class="products" id="produtos">
 
 <div class="card">
-<img src="https://via.placeholder.com/400x400">
-<h3>Bleu Intense</h3>
-<p>100ml</p>
-<p><strong>¥12,000</strong></p>
-<button onclick="comprar('Bleu Intense - ¥12,000')">Comprar</button>
+<img src="./Images/Dior Sauvage.jpg.jpg" alt="Dior Sauvage">
+<h3>Dior Sauvage Eau de Parfum</h3>
+<p class="price-old">¥30,000</p>
+<p class="price-new">¥15,000</p>
+<button onclick="abrirModal('Dior Sauvage Eau de Parfum- ¥16,000')">COMPRAR</button>
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/400x400">
-<h3>Golden Night</h3>
-<p>100ml</p>
-<p><strong>¥14,500</strong></p>
-<button onclick="comprar('Golden Night - ¥14,500')">Comprar</button>
+<img src="./Images/creed-aventus.jpg.png" alt="Creed Aventus">
+<h3>Creed Aventus</h3>
+<p class="price-old">¥55,000</p>
+<p class="price-new">¥18,500</p>
+<button onclick="abrirModal('Creed Aventus - ¥18,000')">COMPRAR</button>
 </div>
 
-<div class="card">
-<img src="https://via.placeholder.com/400x400">
-<h3>Floral Sensation</h3>
-<p>50ml</p>
-<p><strong>¥9,800</strong></p>
-<button onclick="comprar('Floral Sensation - ¥9,800')">Comprar</button>
-</div>
+</section>
 
-</div>
-</div>
-
-<div class="about" id="sobre">
-<h2>Sobre a Nossa Loja</h2>
+<section class="about" id="sobre">
+<h2>Sobre a Essenza JP</h2>
 <p>
-Somos uma loja especializada em perfumes originais localizada no Japão 🇯🇵.
-Trabalhamos apenas com fragrâncias autênticas e selecionadas.
-Nosso objetivo é oferecer elegância, sofisticação e qualidade para nossos clientes.
+Somos especialistas em perfumaria de luxo no Japão.
+Selecionamos fragrâncias icônicas e autênticas para clientes exigentes.
+Compromisso com originalidade, sofisticação e atendimento personalizado.
 </p>
-<p>
-Enviamos para todo o Japão com rapidez e segurança.
-Atendimento direto e personalizado.
-</p>
-</div>
+</section>
 
 <footer>
 <p>© 2026 Essência Japão - Todos os direitos reservados</p>
 <p>Email: essenzajp@gmail.com</p>
 
-<p>Telefone: 080-6640-2386</p>
+<p>Atendimento ao cliente 1: 080-6234-7859</p>
 <p><strong>Não atendemos ligações, apenas mensagens.</strong></p>
 
-<p>Parceiro: 080-6234-7859</p>
+<p>Atendimento ao cliente 2: 080-6640-2386</p>
 <p><strong>Não atendemos ligações, apenas mensagens.</strong></p>
+
+<div class="modal" id="modal">
+<div class="modal-content">
+<h3>Escolha o Atendimento</h3>
+<button onclick="comprar(1)">Falar com Atendimento 1</button>
+<button onclick="comprar(2)">Falar com Atendimento 2</button>
+<br><br>
+<button onclick="fecharModal()">Cancelar</button>
+</div>
+</div>
 
 <script>
-function comprar(produto) {
-    let mensagem = "Olá, quero comprar: " + produto;
-    window.location.href = "https://wa.me/818066402386?text=" + encodeURIComponent(mensagem);
+let produtoSelecionado = "";
+
+function abrirModal(produto) {
+    produtoSelecionado = produto;
+    document.getElementById("modal").style.display = "flex";
+}
+
+function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+function comprar(opcao) {
+    let mensagem = "Olá, quero comprar: " + produtoSelecionado;
+
+    if(opcao === 1){
+        window.location.href = "https://wa.me/818066402386?text=" + encodeURIComponent(mensagem);
+    } else {
+        window.location.href = "https://wa.me/818062347859?text=" + encodeURIComponent(mensagem);
+    }
 }
 </script>
 
