@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Essenza JP</title>
+<title>Drop Parfum</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
 
@@ -53,9 +53,15 @@ nav a{
     max-width:1200px;
     margin:auto;
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:40px;
+    grid-template-columns: repeat(4, 1fr); /* 4 produtos por linha */
+    gap:30px;
     padding:40px 20px;
+}
+}
+@media (max-width: 768px){
+    .products{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .card{
@@ -72,11 +78,13 @@ nav a{
     border:1px solid #d4af37;
 }
 
+/* AJUSTE DAS IMAGENS */
 .card img{
     width:100%;
-    height:300px;
-    object-fit:cover;
-    border-radius:6px;
+    height:auto;   /* mantém proporção real */
+    display:block;
+}
+}
 }
 
 .card h3{
@@ -168,7 +176,7 @@ footer{
 <body>
 
 <header>
-<h1>ESSENZA JP</h1>
+<h1>DROP PARFUM</h1>
 <p>PERFUMES AUTÊNTICOS NO JAPÃO 🇯🇵</p>
 </header>
 
@@ -181,25 +189,27 @@ footer{
 <section class="products" id="produtos">
 
 <div class="card">
-<img src="./Images/Dior Sauvage.jpg.jpg" alt="Dior Sauvage">
+<img src="https://fimgs.net/mdimg/perfume/375x500.48100.jpg" 
+     alt="Dior Sauvage Eau de Parfum">
 <h3>Dior Sauvage Eau de Parfum</h3>
 <p class="price-old">¥30,000</p>
 <p class="price-new">¥15,000</p>
-<button onclick="abrirModal('Dior Sauvage Eau de Parfum- ¥16,000')">COMPRAR</button>
+<button onclick="abrirModal('Dior Sauvage Eau de Parfum - ¥15,000')">COMPRAR</button>
 </div>
 
 <div class="card">
-<img src="./Images/creed-aventus.jpg.png" alt="Creed Aventus">
+<img src="https://fimgs.net/mdimg/perfume/375x500.9828.jpg" 
+     alt="Creed Aventus Eau de Parfum">
 <h3>Creed Aventus</h3>
 <p class="price-old">¥55,000</p>
 <p class="price-new">¥18,500</p>
-<button onclick="abrirModal('Creed Aventus - ¥18,000')">COMPRAR</button>
+<button onclick="abrirModal('Creed Aventus - ¥18,500')">COMPRAR</button>
 </div>
 
 </section>
 
 <section class="about" id="sobre">
-<h2>Sobre a Essenza JP</h2>
+<h2>Sobre a DROP PARFUM JP</h2>
 <p>
 Somos especialistas em perfumaria de luxo no Japão.
 Selecionamos fragrâncias icônicas e autênticas para clientes exigentes.
@@ -208,8 +218,8 @@ Compromisso com originalidade, sofisticação e atendimento personalizado.
 </section>
 
 <footer>
-<p>© 2026 Essência Japão - Todos os direitos reservados</p>
-<p>Email: essenzajp@gmail.com</p>
+<p>© 2026 Drop para todo o Japão - Todos os direitos reservados</p>
+<p>Email: dropparfum@gmail.com</p>
 
 <p>Atendimento ao cliente 1: 080-6234-7859</p>
 <p><strong>Não atendemos ligações, apenas mensagens.</strong></p>
