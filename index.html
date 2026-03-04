@@ -53,11 +53,11 @@ nav a{
     max-width:1200px;
     margin:auto;
     display:grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 produtos por linha */
+    grid-template-columns: repeat(4, 1fr);
     gap:30px;
     padding:40px 20px;
 }
-}
+
 @media (max-width: 768px){
     .products{
         grid-template-columns: repeat(2, 1fr);
@@ -78,13 +78,10 @@ nav a{
     border:1px solid #d4af37;
 }
 
-/* AJUSTE DAS IMAGENS */
 .card img{
     width:100%;
-    height:auto;   /* mantém proporção real */
+    height:auto;
     display:block;
-}
-}
 }
 
 .card h3{
@@ -188,9 +185,10 @@ footer{
 
 <section class="products" id="produtos">
 
+<!-- PRODUTOS ANTIGOS -->
+
 <div class="card">
-<img src="https://fimgs.net/mdimg/perfume/375x500.48100.jpg" 
-     alt="Dior Sauvage Eau de Parfum">
+<img src="https://edge.dis.commercecloud.salesforce.com/dw/image/v2/BKBN_PRD/on/demandware.static/-/Sites-catalog_master_sfcc_krs/default/dwefd0ad80/images/large/3301103986_1.jpg?sw=768&sh=768&sm=fit">
 <h3>Dior Sauvage Eau de Parfum</h3>
 <p class="price-old">¥30,000</p>
 <p class="price-new">¥15,000</p>
@@ -198,12 +196,38 @@ footer{
 </div>
 
 <div class="card">
-<img src="https://fimgs.net/mdimg/perfume/375x500.9828.jpg" 
-     alt="Creed Aventus Eau de Parfum">
+<img src="https://www.creedperfume.com.au/cdn/shop/files/aventus100mlblacklogo_800x.png?v=1748471823">
 <h3>Creed Aventus</h3>
 <p class="price-old">¥55,000</p>
 <p class="price-new">¥18,500</p>
 <button onclick="abrirModal('Creed Aventus - ¥18,500')">COMPRAR</button>
+</div>
+
+<!-- INITIO SIDE EFFECT -->
+<div class="card">
+<img src="https://islandperfumebar.com/cdn/shop/files/Side-Effect-Eau-de-Parfum-2.jpg?v=1713388664" alt="Initio Side Effect Eau de Parfum">
+<h3>Initio Side Effect Eau de Parfum</h3>
+<p class="price-old">¥48,000</p>
+<p class="price-new">¥21,000</p>
+<button onclick="abrirModal('Initio Side Effect - ¥21,000')">COMPRAR</button>
+</div>
+
+<!-- LOUIS VUITTON IMAGINATION -->
+<div class="card">
+<img src="https://www.crepslocker.com/cdn/shop/files/louis-vuitton-imagination-parfum-100ml-nvprod2970067v-front-packaging.jpg?v=1694076708" alt="Louis Vuitton Imagination">
+<h3>Louis Vuitton Imagination</h3>
+<p class="price-old">¥52,000</p>
+<p class="price-new">¥25,000</p>
+<button onclick="abrirModal('Louis Vuitton Imagination - ¥25,000')">COMPRAR</button>
+</div>
+
+<!-- Jean Paul Gaultier LE MALE ELIXIR ABSOLU PARFUM INTENSE -->
+<div class="card">
+<img src="https://www.beautytheshop.com/imgs/productos_cosmetica/resized/680x680/8435415102353_1.webp" alt="Jean Paul Gaultier Le Male Elixir">
+<h3>Jean Paul Gaultier Le Male Elixir ABSOLU PARFUM INTENSE</h3>
+<p class="price-old">¥32,500</p>
+<p class="price-new">¥20,500</p>
+<button onclick="abrirModal('Jean Paul Gaultier Le Male Elixir ABSOLU PARFUM INTENSE- ¥20,500')">COMPRAR</button>
 </div>
 
 </section>
